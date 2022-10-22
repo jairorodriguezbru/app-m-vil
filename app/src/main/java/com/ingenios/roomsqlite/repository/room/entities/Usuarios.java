@@ -8,18 +8,17 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "usuarios", foreignKeys = {@ForeignKey(entity = Personas.class,parentColumns = "id",childColumns = "persona_id",onDelete = 1,onUpdate = 1)})
 
 public class Usuarios {
+
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(index = true, name = "id")
     int id;
-
-    @ColumnInfo(name = "email")
-    String email;
 
     @ColumnInfo(name = "password")
     String password;
 
     @ColumnInfo(index = true, name = "persona_id")
     long persona_id;
+
 
     public Usuarios() {
     }
@@ -30,14 +29,6 @@ public class Usuarios {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getPassword() {

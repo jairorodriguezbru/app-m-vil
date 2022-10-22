@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
                 try {
                     usuariosDao = db.usuariosDao();
                     Usuarios usuario = usuariosDao.init(binding.inEmail.getText().toString(),binding.inPassword.getText().toString());
-                    if(!usuario.getEmail().isEmpty()){
+                    if(!usuario.getPassword().isEmpty()){
                         //2. Hacer login utilizando datos de la tabla usuarios
 
                         Intent intent = new Intent(LoginActivity.this,PersonasActivity.class);

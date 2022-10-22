@@ -40,7 +40,7 @@ public class RegistrarmeViewModel extends AndroidViewModel {
         persona.setFoto("");
         long id = personasDao.insertOne(persona);
         Usuarios usuario = new Usuarios();
-        usuario.setEmail(binding.inEmail.getText().toString());
+        persona.setEmail(binding.inEmail.getText().toString());
         //1. Encriptar setPassword
         usuario.setPassword(binding.inPassword.getText().toString());
         usuario.setPersona_id(id);

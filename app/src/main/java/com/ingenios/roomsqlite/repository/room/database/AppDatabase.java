@@ -14,7 +14,7 @@ import com.ingenios.roomsqlite.repository.room.entities.Usuarios;
 //Here initialise daos with respective tables
 @Database(entities = {Personas.class, Usuarios.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
-    private static final String DATABASE_NAME = "my_database.db";
+    private static final String DATABASE_NAME = "my_database.sqlite";
     private static AppDatabase sInstance;
 
     public abstract PersonasDao personasDao();

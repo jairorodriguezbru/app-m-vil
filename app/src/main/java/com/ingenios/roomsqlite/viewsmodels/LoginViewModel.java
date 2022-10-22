@@ -7,20 +7,22 @@ import android.util.Patterns;
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
 
+import com.ingenios.roomsqlite.repository.room.entities.Personas;
 import com.ingenios.roomsqlite.repository.room.entities.Usuarios;
 
 public class LoginViewModel extends BaseObservable {
     public Usuarios usuarios;
+    public Personas personas;
 
     // getter and setter methods
     // for email variable
     @Bindable
     public String getUserEmail() {
-        return usuarios.getEmail();
+        return personas.getEmail();
     }
 
     public void setUserEmail(String email) {
-        usuarios.setEmail(email);
+        personas.setEmail(email);
         //notifyPropertyChanged(BR.userEmail);
     }
 

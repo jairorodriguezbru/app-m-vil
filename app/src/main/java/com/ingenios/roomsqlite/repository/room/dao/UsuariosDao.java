@@ -19,7 +19,7 @@ public interface UsuariosDao {
     @Query("SELECT * FROM usuarios WHERE id = :id")
     Usuarios findByPk(int id);
 
-    @Query("SELECT u.* FROM personas p INNER JOIN usuarios u on p.id = u.persona_id WHERE p.email = :email AND u.password = :password")
+    @Query("SELECT usuarios.id,usuarios.password FROM usuarios INNER JOIN personas WHERE usuarios.persona_id = personas.id AND personas.email = :email AND usuarios.password = :password")
     Usuarios init(String email, String password);
 
     @Query("SELECT COUNT(*) from usuarios")

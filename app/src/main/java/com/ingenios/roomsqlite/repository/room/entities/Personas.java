@@ -22,6 +22,9 @@ public class Personas {
     @ColumnInfo(name = "apellidos")
     String apellidos;
 
+    @ColumnInfo(name = "email")
+    String email;
+
     @TypeConverters(Converters.class)
     @ColumnInfo(name = "fechanacimiento")
     Date fechanacimiento;
@@ -57,6 +60,14 @@ public class Personas {
 
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Date getFechanacimiento() {
